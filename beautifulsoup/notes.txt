@@ -1,0 +1,11 @@
+Sample iTunes URL: https://itunes.apple.com/us/app/id428851691?mt=8
+
+Struction {{ base }}/{{ locale }}/{{ type-will be 'app' }}/id{{ id }}
+
+
+Basic flow:
+
+1a. Client makes request to {{ my_base_url }}/apps/{{ app id }}
+1b. Client makes request to {{ my_base_url }}/apps?url={{ itunes url }}
+
+2. (If sent as url, parse out app id)
