@@ -1,16 +1,11 @@
-from __future__ import absolute_import
+from celery import Celery
+from random import randint
 
-from project.celery import celery
-
-
-@celery.task
-def add(x, y):
-    return x + y
+celery = Celery('tasks')
+celery.config_from_object('.celeryconfig')
 
 
-@celery.task
-def mul(x, y):
-    return x * y
+
 
 
 @celery.task
